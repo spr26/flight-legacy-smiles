@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { ArrowLeft, Gift, Sparkles, Star, Check } from "lucide-react";
 
 interface UpgradeScreenProps {
-  onNext: () => void;
+  onNext: (upgradeData?: any) => void;
   onBack: () => void;
 }
 
@@ -188,7 +188,7 @@ export default function UpgradeScreen({ onNext, onBack }: UpgradeScreenProps) {
             <Button
               variant={wantsUpgrade ? "upgrade" : "comfort"}
               size="lg"
-              onClick={onNext}
+              onClick={() => onNext({ upgrade: wantsUpgrade, amount: wantsUpgrade ? 104 : 5 })}
               className="text-lg px-12 py-4 mb-4"
             >
               {wantsUpgrade ? 'Continue with Premium' : 'Continue with Basic'}
@@ -203,7 +203,7 @@ export default function UpgradeScreen({ onNext, onBack }: UpgradeScreenProps) {
         <div className="text-center mt-6">
           <Button
             variant="ghost"
-            onClick={onNext}
+            onClick={() => onNext({ upgrade: false, amount: 5 })}
             className="text-muted-foreground"
           >
             Skip upgrade and continue with basic plan
