@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom colors for the app
+				'warm-orange': 'hsl(var(--warm-orange))',
+				'soft-purple': 'hsl(var(--soft-purple))',
+				'gentle-blue': 'hsl(var(--gentle-blue))',
+				'comfort-cream': 'hsl(var(--comfort-cream))',
+				'trust-navy': 'hsl(var(--trust-navy))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +73,20 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-warm': 'var(--gradient-warm)',
+				'gradient-gentle': 'var(--gradient-gentle)',
+			},
+			boxShadow: {
+				'gentle': 'var(--shadow-gentle)',
+				'warm': 'var(--shadow-warm)',
+				'card': 'var(--shadow-card)',
+			},
+			transitionProperty: {
+				'gentle': 'var(--transition-gentle)',
+				'bounce': 'var(--transition-bounce)',
 			},
 			keyframes: {
 				'accordion-down': {
